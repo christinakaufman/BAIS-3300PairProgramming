@@ -6,11 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <link
-      rel="stylesheet"
-      href="{{ url_for('css', filename='stylesheet.css') }}"
-    />
+    <link rel="stylesheet" href="./css/stylesheet.css" />
     <title>{{ pageTitle }}</title>
   </head>
 
@@ -18,12 +14,7 @@
     <div class="container">{% block body %}xx {% endblock %}</div>
   </body>
 
-<button onclick="window.location.href='/about';".>
-  About Page
-</button>
+  <button onclick="window.location.href='/about';" .>About Page</button>
 
-<button onclick="window.location.href='/';".>
-  Home Page
-</button>
-
+  <button onclick="window.location.href='/';" .>Home Page</button>
 </html>
