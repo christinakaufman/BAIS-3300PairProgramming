@@ -56,5 +56,5 @@ if __name__ == "__main__":
 @app.route("/about", methods=["GET", "POST"])
 def about():
     return render_template(
-        "about.html", pageTitle="About", friends=friends_dict
+        "about.html", pageTitle="About"
     )
