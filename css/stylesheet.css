@@ -10,7 +10,7 @@ input[type="text"] {
   margin-bottom: 0.5em;
 }
 
-img{
+img {
   max-width: 100%;
   height: 300px;
   align-items: center;
@@ -18,7 +18,7 @@ img{
   border-radius: 5px;
 }
 
-figure > img{
+figure > img {
   width: 0.1px;
   text-align: center;
 }
