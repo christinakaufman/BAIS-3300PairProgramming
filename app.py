@@ -52,7 +52,7 @@ def add():
 @app.route('/about')
 def about():
     return render_template(
-        "about.html", pageTitle="Web form template", books=all_books_dict
+        "about.html", pageTitle="About", books=all_books_dict
     )
 
 if __name__ == "__main__":
