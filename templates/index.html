@@ -9,18 +9,20 @@
     </p>
 
     <p>
-      <label for="ice-cream">
-        Favorite flavor of ice cream:
-        <select name="flavor" id="ice-cream" required>
+      <label for="Sport">
+        Favorite sport to watch:
+        <select name="game" id="Sport" required>
           <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Vanilla</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="swirl">Swirl</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Football">Football</option>
+          <option value="Hockey">Hockey</option>
+          <option value="Baseball">Baseball</option>
+          <option value="Soccer">Soccer</option>
         </select>
       </label>
     </p>
     <p>
-      <label>Do you read for fun?</label>
+      <label>Do you stream sports games?</label>
       <label for="read-yes">
         <input
           type="radio"
@@ -45,35 +47,45 @@
     </p>
 
     <fieldset>
-      <legend>Choose your favorite activities</legend>
-      <label for="for-running">
+      <legend>Choose your preffered streaming service</legend>
+      <label for="for-ESPN">
         <input
           type="checkbox"
-          id="for-running"
-          name="activities"
-          value="running"
+          id="for-ESPN"
+          name="streaming"
+          value="ESPN"
         />
-        Running
+        ESPN
       </label>
 
-      <label for="for-biking">
+      <label for="for-FOX">
         <input
           type="checkbox"
-          id="for-biking"
-          name="activities"
-          value="biking"
+          id="for-FOX"
+          name="streaming"
+          value="FOX"
         />
-        Biking
+        FOX
       </label>
 
-      <label for="for-reading">
+      <label for="for-CBS">
         <input
           type="checkbox"
-          id="for-reading"
-          name="activities"
-          value="reading"
+          id="for-CBS"
+          name="streaming"
+          value="CBS"
         />
-        Reading
+        CBS
+      </label>
+
+      <label for="for-NBC">
+        <input
+          type="checkbox"
+          id="for-NBC"
+          name="streaming"
+          value="NBC"
+        />
+        NBC
       </label>
     </fieldset>
 
@@ -88,9 +100,9 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Favorite Ice Cream</th>
-        <th>Read for Fun</th>
-        <th>Favorite Activities</th>
+        <th>Favorite Sport</th>
+        <th>Do You Stream</th>
+        <th>Favorite Streaming Service</th>
       </tr>
     </thead>
 
@@ -98,9 +110,9 @@
       {% for friend in friends %}
       <tr>
         <td>{{ friend.name }}</td>
-        <td>{{ friend.flavor }}</td>
-        <td>{{ friend.read }}</td>
-        <td>{{ friend.activities }}</td>
+        <td>{{ friend.sport }}</td>
+        <td>{{ friend.stream }}</td>
+        <td>{{ friend.streaming }}</td>
       </tr>
       {% endfor %}
     </tbody>

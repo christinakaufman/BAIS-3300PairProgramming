@@ -49,6 +49,11 @@ def add():
     else:
         return redirect(url_for("index"))
 
+@app.route('/about', methods=["GET","POST"])
+def about():
+    return render_template(
+        "about.html", pageTitle="About"
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
