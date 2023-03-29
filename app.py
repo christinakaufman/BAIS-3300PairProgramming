@@ -13,7 +13,7 @@ def index():
         "index.html", pageTitle="Web form template", friends=friends_dict
     )
 
-
+ 
 @app.route("/add", methods=["POST"])
 def add():
     print("inside add function")
