@@ -10,7 +10,7 @@ friends_dict = [
 @app.route("/", methods=["GET", "POST"])
 def index():
     return render_template(
-        "index.html", pageTitle="Homepage", friends=friends_dict
+        "index.html", pageTitle="Web form template", friends=friends_dict
     )
 
 
@@ -49,12 +49,11 @@ def add():
     else:
         return redirect(url_for("index"))
 
+@app.route('/about')
+def about():
+    return render_template(
+        "about.html", pageTitle="Web form template", books=all_books_dict
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-@app.route("/about", methods=["GET", "POST"])
-def about():
-    return render_template(
-        "about.html", pageTitle="About"
-    )
