@@ -3,9 +3,21 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 friends_dict = [
-    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
+    {"Name": "Test", "Favorite Sport": "Football", "Do You Stream": "yes", "Favorite Streaming Servce": "ESPN"}
 ]
 
+
+###### Custom Error Pages ######
+# Handling error 404 and displaying relevant web page
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template("404.html"), 404
+
+
+# Handling error 500 and displaying relevant web page
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template("500.html"), 500
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -22,22 +34,22 @@ def add():
         form = request.form
 
         fname = form["fname"]
-        flavor = form["flavor"]
-        read = form["read"]
-        activities = form.getlist("activities")  # this is a PYthon list
+        sport = form["sport"]
+        stream = form["stream"]
+        favorite = form.getlist("favorite")  # this is a PYthon list
 
         print(fname)
-        print(flavor)
-        print(read)
-        print(activities)
+        print(sport)
+        print(stream)
+        print(favorite)
 
-        activities_string = ", ".join(activities)  # make the Python list into a string
+        activities_string = ", ".join(favorite)  # make the Python list into a string
 
         friend_dict = {
-            "name": fname,
-            "flavor": flavor,
-            "read": read,
-            "activities": activities_string,
+            "fname": fname,
+            "sport": flavor,
+            "stream": read,
+            "favorite": activities_string,
         }
 
         print(friend_dict)
