@@ -39,7 +39,7 @@ def add():
 
         form = request.form
 
-        name = form["fname"]
+        fname = form["fname"]
         sport = form["sport"]
         watch = form["watch"]
         favorite = form.getlist("favorite")  # this is a PYthon list
