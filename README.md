@@ -1,46 +1,11 @@
-# Flask Web Form Template
+# Carl and Christina's Notes 
 
-Basic structure for starting a Flask web form project with Jinja templates
+**This website will display a survey about which sports do you prefer to watch**
 
----
+**In addition to that, it will also ask you if you watch these sports on streaming services, and if you do, which streaming services you prefer to use**
 
-1. Clone this repository to local computer
+## Instructions 
 
-2. Create a new repository in your GitHub and clone it to the local computer
+Please answer every question to the best of your abillity. This form is just a test adn we want to see if it will gather records properly. Each question will require an answer in the form of either an input text box, radio buttons, and a checkbox list. 
 
-3. Copy all files, EXCEPT the .git folder, from my repository folder into your repository folder
-
-4. Delete my repository folder from your computer
-
-5. Create a new virtual environment
-
-   - Windows: `python -m venv ./venv`
-   - Mac: `python3 -m venv ./venv`
-
-6. Activate the new virtual environment
-
-   - Windows: `.\venv\Scripts\activate`
-   - Mac: `source ./venv/bin/activate`
-
-7. Install the dependencies `pip install -r requirements.txt`
-
-8. Run the program using either:
-
-   - `flask run`
-   - `python app.py`
-
-9. Test the application by visiting it in your web browser
-
-10. If everything is working, commit to your repository as an initial commit.
-
-11. Create and change to a new local development branch `git checkout b development`
-
-12. Continue working with the project as you normally would.
-
-### TO-DO
-
-- [x] Catch all selected activities in /add and put them into the python dictionary
-- [ ] Create a confirmation page before submitting
-- [ ] Submit records to database
-- [ ] Delete a record
-- [ ] Update a record
+Click submit when finished and the responses will be recorded in the table at the bottom of the page. 
