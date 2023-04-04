@@ -19,9 +19,9 @@
         <legend>Favorite Sport to Watch:</legend>
         <select class="mb-3 form-select" name="flavor" id="ice-cream" required>
           <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Football</option>
-          <option value="chocolate">Soccer</option>
-          <option value="swirl">Basketball</option>
+          <option value="Football">Football</option>
+          <option value="Soccer">Soccer</option>
+          <option value="Basketball">Basketball</option>
         </select>
       </fieldset>
   
@@ -63,7 +63,7 @@
             class="form-check-input"
             id="for-running"
             name="activities"
-            value="running"
+            value="ESPN"
           />
           ESPN
         </label>
@@ -76,7 +76,7 @@
             class="form-check-input"
             id="for-biking"
             name="activities"
-            value="biking"
+            value="FOX"
           />
           FOX
         </label>
@@ -89,7 +89,7 @@
             class="form-check-input"
             id="for-reading"
             name="activities"
-            value="reading"
+            value="CBS"
           />
           CBS
         </label>
@@ -125,9 +125,9 @@
         {% for friend in friends %}
         <tr>
           <td>{{ friend.name }}</td>
-          <td>{{ friend.sport }}</td>
-          <td>{{ friend.watch }}</td>
-          <td>{{ friend.favorite }}</td>
+          <td>{{ friend.flavor }}</td>
+          <td>{{ friend.read }}</td>
+          <td>{{ friend.activities }}</td>
         </tr>
         {% endfor %}
       </tbody>
