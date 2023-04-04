@@ -1,11 +1,12 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, flash
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "alsknq3rAg$GernaeasSEF^woei4r098HRFYUKioq73498"
+
 
 friends_dict = [
-    {"Name": "Test", "Favorite Sport": "Football", "Do You Stream": "yes", "Favorite Streaming Servce": "ESPN"}
+    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
 ]
-
 
 ###### Custom Error Pages ######
 # Handling error 404 and displaying relevant web page
@@ -19,13 +20,18 @@ def not_found_error(error):
 def internal_error(error):
     return render_template("500.html"), 500
 
+
+###### Routes ######
+
+# Home page
 @app.route("/", methods=["GET", "POST"])
 def index():
     return render_template(
         "index.html", pageTitle="Web form template", friends=friends_dict
     )
 
- 
+
+# /add route for form submission
 @app.route("/add", methods=["POST"])
 def add():
     print("inside add function")
@@ -34,22 +40,22 @@ def add():
         form = request.form
 
         fname = form["fname"]
-        sport = form["sport"]
-        stream = form["stream"]
-        favorite = form.getlist("favorite")  # this is a PYthon list
+        flavor = form["flavor"]
+        read = form["read"]
+        activities = form.getlist("activities")  # this is a PYthon list
 
         print(fname)
-        print(sport)
-        print(stream)
-        print(favorite)
+        print(flavor)
+        print(read)
+        print(activities)
 
-        activities_string = ", ".join(favorite)  # make the Python list into a string
+        activities_string = ", ".join(activities)  # make the Python list into a string
 
         friend_dict = {
-            "fname": fname,
-            "sport": flavor,
-            "stream": read,
-            "favorite": activities_string,
+            "name": fname,
+            "flavor": flavor,
+            "read": read,
+            "activities": activities_string,
         }
 
         print(friend_dict)
@@ -58,20 +64,21 @@ def add():
         )  # append this dictionary entry to the larger friends dictionary
         print(friends_dict)
 
-            flash(
+        flash(
             "The friend ;" + fname + " has been added to the database.",
             "success",
         )
-        
         return redirect(url_for("index"))
     else:
         return redirect(url_for("index"))
 
-@app.route('/about', methods=["GET","POST"])
+
+# About page
+@app.route("/about", methods=["GET"])
 def about():
-    return render_template(
-        "about.html", pageTitle="About"
-    )
+    return render_template("about.html", pageTitle="Pair programming team")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+
