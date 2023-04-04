@@ -3,10 +3,17 @@
 <hr />
 <main>
   <form action="/add" method="POST">
-    <p>
-      <label for="first-name">First name:</label>
-      <input type="text" id="first-name" name="fname" />
-    </p>
+    <div class="mb-3">
+      <label class="form-label" for="first-name">First name:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="first-name"
+        name="fname"
+        autofocus="autofocus"
+        required
+      />
+    </div>
 
     <p>
       <label for="Sport">
@@ -49,42 +56,22 @@
     <fieldset>
       <legend>Choose your preffered streaming service</legend>
       <label for="for-ESPN">
-        <input
-          type="checkbox"
-          id="for-ESPN"
-          name="streaming"
-          value="ESPN"
-        />
+        <input type="checkbox" id="for-ESPN" name="streaming" value="ESPN" />
         ESPN
       </label>
 
       <label for="for-FOX">
-        <input
-          type="checkbox"
-          id="for-FOX"
-          name="streaming"
-          value="FOX"
-        />
+        <input type="checkbox" id="for-FOX" name="streaming" value="FOX" />
         FOX
       </label>
 
       <label for="for-CBS">
-        <input
-          type="checkbox"
-          id="for-CBS"
-          name="streaming"
-          value="CBS"
-        />
+        <input type="checkbox" id="for-CBS" name="streaming" value="CBS" />
         CBS
       </label>
 
       <label for="for-NBC">
-        <input
-          type="checkbox"
-          id="for-NBC"
-          name="streaming"
-          value="NBC"
-        />
+        <input type="checkbox" id="for-NBC" name="streaming" value="NBC" />
         NBC
       </label>
     </fieldset>
