@@ -42,7 +42,7 @@ def add():
         fname = form["fname"]
         flavor = form["flavor"]
         read = form["read"]
-        activities = form.getlist("activites")  # this is a PYthon list
+        activities = form.getlist("activities")  # this is a PYthon list
 
         print(fname)
         print(flavor)
