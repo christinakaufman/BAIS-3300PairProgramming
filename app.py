@@ -5,7 +5,7 @@ app.config["SECRET_KEY"] = "alsknq3rAg$GernaeasSEF^woei4r098HRFYUKioq73498"
 
 
 friends_dict = [
-    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
+    {"name": "Test", "flavor": "Soccer", "read": "yes", "activities": "ESPN"}
 ]
 
 ###### Custom Error Pages ######
