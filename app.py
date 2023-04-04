@@ -5,7 +5,7 @@ app.config["SECRET_KEY"] = "alsknq3rAg$GernaeasSEF^woei4r098HRFYUKioq73498"
 
 
 friends_dict = [
-    {"name": "Test", "flavor": "Soccer", "read": "yes", "activities": "ESPN"}
+    {"name": "Test", "sport": "Soccer", "watch": "yes", "favorite": "ESPN"}
 ]
 
 ###### Custom Error Pages ######
@@ -39,23 +39,23 @@ def add():
 
         form = request.form
 
-        fname = form["fname"]
-        flavor = form["flavor"]
-        read = form["read"]
-        activities = form.getlist("activities")  # this is a PYthon list
+        name = form["fname"]
+        sport = form["sport"]
+        watch = form["watch"]
+        favorite = form.getlist("favorite")  # this is a PYthon list
 
         print(fname)
-        print(flavor)
-        print(read)
-        print(activities)
+        print(sport)
+        print(watch)
+        print(favorite)
 
         activities_string = ", ".join(activities)  # make the Python list into a string
 
         friend_dict = {
             "name": fname,
-            "flavor": flavor,
-            "read": read,
-            "activities": activities_string,
+            "sport": sport,
+            "watch": watch,
+            "favorite": activities_string,
         }
 
         print(friend_dict)
