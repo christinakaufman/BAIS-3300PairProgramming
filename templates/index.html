@@ -2,16 +2,6 @@
   <h2>Add a new friend</h2>
   <hr />
   <main>
-
-    <div id="menubar">
-      <nav>
-        <ul id="navlist">
-          <a id="homenav" href="./index.html"> Home </a>
-          <a id="aboutnav" href="./about.html"> About </a>
-        </ul>
-      </nav>
-    </div>
-
     <form action="/add" method="POST">
       <div class="mb-3">
         <label class="form-label" for="first-name">First name:</label>
@@ -26,18 +16,18 @@
       </div>
   
       <fieldset>
-        <legend>Favorite flavor of ice cream:</legend>
+        <legend>Favorite Sport to Watch:</legend>
         <select class="mb-3 form-select" name="flavor" id="ice-cream" required>
           <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Vanilla</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="swirl">Swirl</option>
+          <option value="vanilla">Football</option>
+          <option value="chocolate">Soccer</option>
+          <option value="swirl">Basketball</option>
         </select>
       </fieldset>
   
   
       <fieldset>
-        <legend>Do you read for fun?</legend>
+        <legend>Do you watach on streaming services?</legend>
         <div class="mb-3 form-check form-check-inline">
           <label class="form-check-label" for="read-yes">
           <input
@@ -65,7 +55,7 @@
       
   
       <fieldset>
-        <legend>Choose your favorite activities</legend>
+        <legend>Choose your favorite streaming service:</legend>
               <div class="form-check">
           <label class="form-check-label" for="for-running">
           <input
@@ -75,7 +65,7 @@
             name="activities"
             value="running"
           />
-          Running
+          ESPN
         </label>
         </div>  
   
@@ -88,7 +78,7 @@
             name="activities"
             value="biking"
           />
-          Biking
+          FOX
         </label>
         </div>
   
@@ -101,7 +91,7 @@
             name="activities"
             value="reading"
           />
-          Reading
+          CBS
         </label>
         </div>
       </fieldset>
@@ -110,7 +100,7 @@
         <input
           class="btn btn-primary"
           type="submit"
-          value="Add Book"
+          value="Submit"
           id="submit"
         />
       </div>
@@ -125,9 +115,9 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Favorite Ice Cream</th>
-          <th>Read for Fun</th>
-          <th>Favorite Activities</th>
+          <th>Favorite Sport to Watch</th>
+          <th>Do you stream?</th>
+          <th>Favorite streaming platform</th>
         </tr>
       </thead>
   
@@ -143,5 +133,4 @@
       </tbody>
     </table>
     {% endif %}
-</main>
 {% endblock %}
